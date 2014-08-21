@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/foundation.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main/slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}" />
     <title></title>
 </head>
 <body>
-Hi!
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="#">Антохин сайт кароч</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class="top-bar-section">
+      <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="#">Главная</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Галерея</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Фотопутешествия</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Статьи</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Об авторе</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
+<div class="row">
+<div class="images">
+    <div><div class="image"><img src="{% static 'main/img/Lighthouse.jpg' %}" /></div></div>
+    <div><div class="image"><img src="{% static 'main/img/Koala.jpg' %}" /></div></div>
+    <div><div class="image"><img src="{% static 'main/img/Lighthouse.jpg' %}" /></div></div>
+</div>
+
+</div>
+
+{#    <script src="{% static 'main/js/vendor/jquery.js' %}"></script>#}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{% static 'main/js/foundation/foundation.js' %}"></script>
+    <script src="{% static 'main/slick/slick.js' %}"></script>
+    <script src="{% static 'main/js/main.js' %}"></script>
 </body>
 </html>
