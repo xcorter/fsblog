@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    {% for tour in tours %}
+     <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>{{ tour.title }}</h1>
+            <div class="content">{{ tour.description }}</div>
+            <div>Дата отправления: {{ tour.departure }}</div>
+            <div>Дата прибытия: {{ tour.arrive }}</div>
+            <div>Стоимость: {{ tour.cost }}</div>
+            <form action="/sign-up-for-a-tour">
+                <input type="hidden" name="currentTourId" value="{{ tour.id }}">
+                Записаться на тур <input type="submit"/>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

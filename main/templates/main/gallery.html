@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="large-12">
+        <h1>Галерея</h1>
+        <ul class="clearing-thumbs small-block-grid-4" data-clearing>
+        {% for image in images %}
+              <li><a href="{{ image.image }}"><img data-caption="{{ image.title }}" src="{{ image.thumbnail }}"></a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
