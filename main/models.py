@@ -1,5 +1,4 @@
 from django.db import models
-from fsblog.settings import MEDIA_URL
 
 class Tour(models.Model):
     title = models.CharField(max_length=200)

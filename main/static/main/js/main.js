@@ -11,3 +11,5 @@ $(document).ready(function(){
         cssEase: 'linear'
     });
 });
+
+$(document).foundation();

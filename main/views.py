@@ -1,9 +1,16 @@
 from django.shortcuts import render
-from main.models import Tour, Image
+from main.models import Tour, Image, Carousel
 from main.forms import ClaimForm
 
 def index(request):
-    return render(request, 'main/index.html')
+    images = Carousel.objects.all()
+    return render(
+        request,
+        'main/index.html',
+        {
+            "images": images
+        }
+    )
 
 def gallery(request):
     images = Image.objects.all()
