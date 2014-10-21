@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'main',
 )
 
@@ -86,3 +87,7 @@ _PATH = os.path.abspath(os.path.dirname(__file__))
 
 MEDIA_ROOT = os.path.join(_PATH, 'media')
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(_PATH, 'static')
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_JQUERY_URL = STATIC_URL + "main/js/vendor/jquery.js"

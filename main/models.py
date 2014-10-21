@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Tour(models.Model):
     title = models.CharField(max_length=200)
@@ -37,3 +38,8 @@ class Carousel(models.Model):
     carousel_image.allow_tags = True
     def title(self):
         return self.image.title
+
+class Article(models.Model):
+    title = models.CharField(max_length=255)
+    preview = RichTextField()
+    content = RichTextField()

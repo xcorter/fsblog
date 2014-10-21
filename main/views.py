@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from main.models import Tour, Image, Carousel
+from main.models import Tour, Image, Carousel, Article
 from main.forms import ClaimForm
 
 def index(request):
@@ -11,6 +11,9 @@ def index(request):
             "images": images
         }
     )
+
+def author(request):
+    return render(request, 'main/author.html')
 
 def gallery(request):
     images = Image.objects.all()
@@ -66,3 +69,23 @@ def signUpForATour(request):
                 "form": form
             }
         )
+
+def articles(request):
+    articles = Article.objects.all()
+    return render(
+        request,
+        'main/articles.html',
+        {
+            "articles": articles
+        }
+    )
+
+def article(request, article_id):
+    article = Article.objects.get(pk=article_id)
+    return render(
+        request,
+        'main/article.html',
+        {
+            "article": article
+        }
+    )
