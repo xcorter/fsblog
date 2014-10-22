@@ -1,0 +1,13 @@
+div.slider {
+    /*margin: 0 auto;*/
+}
+
+div.images-wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+div.images {
+    max-height: 60%;
+    margin: 0 auto;
+}
